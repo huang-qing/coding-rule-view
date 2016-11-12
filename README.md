@@ -1,5 +1,4 @@
-# codingRuleView
-编码规则展示
+# codingRuleView-编码规则展示
 
 参数：option
 
