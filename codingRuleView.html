@@ -1,0 +1,112 @@
+<html>
+<title></title>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<link href="css/codingRuleView.css" rel="stylesheet" />
+
+<body>
+    <!--<div class="codingRule">
+        <div class="codingRule-group codingRule-group-odd">
+            <div class="codeingRule-text-container codeingRule-text-container-top">
+                <span class="codeingRule-line">
+                <span class="codeingRule-text" >
+                    XXXXXXXXXXXXXXXX
+                </span>
+                </span>
+            </div>
+            <div class="codingRule-icons">
+                <span class="codingRule-icon codingRule-icon-number"></span>
+                <span class="codingRule-icon codingRule-icon-number"></span>
+                <span class="codingRule-icon codingRule-icon-number"></span>
+                <span class="codingRule-icon codingRule-icon-number"></span>
+            </div>
+            <div class="codeingRule-text-container codeingRule-text-container-bottom">
+                <span class="codeingRule-line">
+                <span class="codeingRule-text" >
+                     XXXXXXXXXXXXXXXX
+                </span>
+                </span>
+            </div>
+        </div>
+        <div class="codingRule-group codingRule-group-even">
+            <div class="codeingRule-text-container codeingRule-text-container-top">
+                <span class="codeingRule-line">
+                <span class="codeingRule-text" >
+                     XXXXXXXXXXXXXXXX
+                </span>
+                </span>
+            </div>
+            <div class="codingRule-icons">
+                <span class="codingRule-icon codingRule-icon-number"></span>
+                <span class="codingRule-icon codingRule-icon-number"></span>
+                <span class="codingRule-icon codingRule-icon-number"></span>
+                <span class="codingRule-icon codingRule-icon-number"></span>
+            </div>
+            <div class="codeingRule-text-container codeingRule-text-container-bottom">
+                <span class="codeingRule-line">
+                <span class="codeingRule-text" >
+                     XXXXXXXXXXXXXXXX
+                </span>
+                </span>
+            </div>
+        </div>
+    </div>-->
+    <div>
+        <h3>
+            编码规则展示
+        </h3>
+        <p>
+            参数：option
+        </p>
+        <p>
+            类型：数组
+        </p>
+        <p>
+            数组对象结构：
+            {
+                type:"01",
+                length:5,
+                name:"编码规则文字解释"                
+            }
+        </p>
+        <p>
+            type(编码类型):
+                "01": 数字类型,
+                "02": 字母类型,
+                "03": 数字|字母类型,
+                "04": 流水码类型,
+                "05": 日期类型
+        </p>
+        <p>
+            length(编码长度):
+            长度为0时，表示任意长度
+        </p>
+        <p>
+            name(编码规则文字解释)
+        </p>
+    </div>
+    <br/>
+    <div id="demo"></div>
+</body>
+<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+<script type="text/javascript" src="js/codingRuleView.js"></script>
+<script type="text/javascript">
+    $("#demo").codingRuleView([{
+        type:"01",
+        length:5,
+        name:"数字类型-长度为5"
+    },{
+        type:"02",
+        length:6,
+        name:"字符类型-长度为6"
+    },{
+        type:"05",
+        length:3,
+        name:"日期类型-长度为5"
+    },{
+        type:"03",
+        length:0,
+        name:"字母|数字类型-长度为任意"
+    }]);
+</script>
+
+</html>
