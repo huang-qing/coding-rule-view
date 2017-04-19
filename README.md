@@ -1,6 +1,6 @@
 # codingRuleView-编码规则展示
 
-####功能示例
+#### 功能示例
 
 ![示例](https://github.com/huang-qing/codingRuleView/raw/master/codingRuleView-Example.png)
 
