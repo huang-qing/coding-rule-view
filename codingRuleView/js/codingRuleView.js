@@ -21,6 +21,8 @@
                 iconType,
                 htmlCodeingRuleGroup = "",
                 htmlCodingRuleIcon = "",
+                minTextWidth = 14,
+                textWidth,
                 htmlCodeingRuleGroupArray = [];
 
             iconType = {
@@ -72,7 +74,7 @@
                     codingLength = item.length;
 
                     htmlCodeingRuleGroup = htmlTemplate.codeingRuleGroup.replace(/\[codeingRule-text\]/g, name).
-                    replace(/\[codingRule-group-odd\|even\]/g, i % 2 === 0 ? "even" : "odd");
+                        replace(/\[codingRule-group-odd\|even\]/g, i % 2 === 0 ? "even" : "odd");
 
                     htmlCodingRuleIcon = "";
 
@@ -132,8 +134,13 @@
                     }
 
                 }
+
                 //计算文字显示宽度
-                currentText.width(currentWidth + nextWidth + offset);
+                textWidth = currentWidth + nextWidth + offset;
+                if (textWidth <= 0) {
+                    textWidth = minTextWidth;
+                }
+                currentText.width(textWidth);
             }
 
             container.find('>.codingRule').width(width);
